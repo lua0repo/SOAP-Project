@@ -1,0 +1,11 @@
+import jakarta.jws.WebService;
+
+@WebService(endpointInterface = "com.example.WeatherService")
+public class WeatherServiceImpl implements WeatherService {
+    @Override
+    public String getWeather(String location) {
+        // Logic to fetch weather data from an API
+        // For example, using OpenWeatherMap API
+        return "Weather data for " + location; // Placeholder
+    }
+}
