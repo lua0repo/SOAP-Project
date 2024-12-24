@@ -1,0 +1,17 @@
+public enum Currency
+{
+    USD,
+    EUR,
+    GBP,
+    // Add more currencies as needed
+}
+
+private void BindDropDownListData()
+{
+    var items = Enum.GetNames(typeof(Currency));
+    Array.Sort(items);
+    currencyA.DataSource = items;
+    currencyA.DataBind();
+    currencyB.DataSource = items;
+    currencyB.DataBind();
+}
