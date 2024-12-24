@@ -1,0 +1,5 @@
+<asp:TextBox ID="currencyAmount" runat="server" Width="70px"></asp:TextBox>
+<asp:DropDownList ID="currencyA" runat="server"></asp:DropDownList>
+<asp:DropDownList ID="currencyB" runat="server"></asp:DropDownList>
+<asp:Button ID="buttonConvert" runat="server" OnClick="buttonConvert_Click" Text="Convert Currency" />
+<asp:Label ID="resultAmount" runat="server"></asp:Label>
