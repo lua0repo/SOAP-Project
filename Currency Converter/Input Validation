@@ -1,0 +1,4 @@
+<asp:RangeValidator ID="amountValidator" runat="server" ControlToValidate="currencyAmount" 
+    ErrorMessage="Integers greater than zero please." MaximumValue="1000000" MinimumValue="1" Type="Integer" ForeColor="Red" />
+<asp:RequiredFieldValidator ID="requiredValidator" runat="server" ControlToValidate="currencyAmount" 
+    ErrorMessage="You must enter a value for the amount." ForeColor="Red" />
