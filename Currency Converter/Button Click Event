@@ -1,0 +1,24 @@
+protected void buttonConvert_Click(object sender, EventArgs e)
+{
+    Page.Validate();
+    if (Page.IsValid)
+    {
+        resultAmount.Text = ConvertCurrency();
+    }
+}
+
+private string ConvertCurrency()
+{
+    var cs = new CurrencyService();
+    int amount = 0;
+    if (int.TryParse(currencyAmount.Text, out amount))
+    {
+        return String.Format("You will receive: {0:0.00} {1}",
+            cs.ExchangeCurrency(amount, currencyA.SelectedValue, currencyB.SelectedValue),
+            currencyB.SelectedValue);
+    }
+    else
+    {
+        return "Could not convert amount. Sorry.";
+    }
+}
